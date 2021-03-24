@@ -1,0 +1,19 @@
+﻿@model Cinegram.Models.View.DetailViewModel
+@{
+    Layout = "~/Views/Shared/_LayoutBasePage.cshtml";
+}
+
+@if (Model.Film != null)
+{
+    <div class="row">
+        <div class="col-md-3">
+            <h2>@Model.Film.Nome</h2>
+            <p>@Model.Film.Regista</p>
+        </div>
+    </div>
+}
+else
+{
+    <h2>@ViewBag.Title</h2>
+    <p>@Model.MessaggioErrore</p>
+}
